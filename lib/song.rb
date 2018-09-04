@@ -58,12 +58,13 @@ class Song
     #if its not in the hash already, add it and set it = 1
     artist_hash = {}
     @@artists.each do |artist|
-      if artist_hash[artist]
-        artist_hash[artist] += 1
-      else artist_hash[artist] = 1 
+        artist_hash[artist] ? artist_hash[artist] += 1 : artist_hash[artist] = 1
     end
+#       if artist_hash[artist]
+#         artist_hash[artist] += 1
+#       else artist_hash[artist] = 1 
+#     end
+#   end
+#   return artist_hash
+# end
   end
-  return artist_hash
-end
-  
-end
